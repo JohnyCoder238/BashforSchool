@@ -1,0 +1,31 @@
+	a) Test your knowledge in quiz at
+https://searchdatacenter.techtarget.com/quiz/Test-your-knowledge-of-useful-Linux-commands-with-this-quiz
+
+b)
+Task 1. Change the name of your prompt.
+export PS1="\u >" for changing prompt to username 
+export PS1="newprompt >" for changing to arbitrary prompt
+
+Task 2. Apply xargs to find the length of a given file.
+echo filename.txt | xargs wc - l
+
+Task 3. Design a script utilizing for and while loops to add odd and subtract the even numbers from 1 to N (N is an integer bash variable, i.e., N=5).
+forandwhile.sh
+
+Task 4. Design a script finding files with suffixes *.txt, *.doc, then
+prints their lengths and sorts them according to the length (in some
+arbitrary directory DIR, i.e., DIR="/tmp".
+fileleng.sh
+
+Task 5. if you have some files, let's say less than 25 in some directory,  files of type *.doc or *.txt, then
+list all files in this directory with *.txt (*.doc) and to each of them assign a number and then print this file and its number
+numberfile.sh
+
+Task 6. write a condition (if, elif else) so, that it will print just half of words(numbers) from point 5.
+halfprint.sh
+
+Task 7. create a file using construction of cat <<EOF, which will contain your email address
+cateof.sh
+
+Task 8. Determine the number of files in two directories; next, print which directory contains more files.
+dircompare.sh

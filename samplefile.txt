@@ -1,0 +1,5 @@
+Item1,300
+Item2,600
+Item3,1100
+Item2,700
+Item1,450

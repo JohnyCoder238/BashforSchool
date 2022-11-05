@@ -1,4 +1,4 @@
-	a) Test your knowledge in quiz at
+a) Test your knowledge in quiz at
 https://searchdatacenter.techtarget.com/quiz/Test-your-knowledge-of-useful-Linux-commands-with-this-quiz
 
 b)
@@ -15,6 +15,7 @@ forandwhile.sh
 Task 4. Design a script finding files with suffixes *.txt, *.doc, then
 prints their lengths and sorts them according to the length (in some
 arbitrary directory DIR, i.e., DIR="/tmp".
+find "SOMEDIRECTORY" -type f -name "*.doc" -or -name "*.txt" | xargs wc -l | sort -n -r
 fileleng.sh
 
 Task 5. if you have some files, let's say less than 25 in some directory,  files of type *.doc or *.txt, then

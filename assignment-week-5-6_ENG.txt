@@ -1,0 +1,46 @@
+For the next two weeks we aim to learn some basics of awk and sed.
+
+Week one:
+
+Learn awk and sed from the following links:
+https://www.tutorialspoint.com/awk/index.htm
+https://www.theunixschool.com/2011/01/sed-include-or-append-line-to-file.html
+
+
+Week two:
+
+1. Calculate the difference in time (in seconds) when two arbitrary files were created on disk 
+   using awk.
+
+2. Use system environment in awk, e.g. command date
+
+3. How do you use an already defined variable i=6 in a listing of every 7 column from 7 to 21st column... of some file
+awk '{i=6; for (j = i+1; j <= 21; j+=7) arr[j/7]=j; print $arr[1] "\t" $arr[2] "\t" $arr[3]}' filename.txt
+
+
+4. How do insert two columns of data before the third column of data from the last column
+awk -v OFS='\t' '{$(NF-3)=$(NF-3)"\tfirstcol\tsecondcol"} 1' filename.txt
+
+5. Sample file
+Item1,300
+Item2,600
+Item3,1100
+Item2,700
+Item1,450
+
+Now, distribute the variables so, that the ones in second column that are larger than 650 will go into file Max.txt and the ones lower than 650 into file Min.txt.
+awk -v FS=',' '{if ($2>=650) print > "max.txt"; else print > "min.txt"}' samplefile.txt
+
+
+6. Sample  file  
+Header 
+HP  
+NEC  
+SGI
+CRAY
+AMD 
+ATOS
+Footer 
+
+Split the file items for every second line without the first and last line in new single files.
+sed '$d' samplefile2.txt | awk '{FN="file"i++".txt"}; {if (NR!=1) print >FN}'

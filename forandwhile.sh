@@ -1,3 +1,6 @@
+: 'Design a script utilizing for and while loops to add odd and subtract the
+ even numbers from 1 to N (N is an integer bash variable, i.e., N=5).
+'
 N=""
 # checking user inpu to be an integer
 while [[ ! $N =~ ^[0-9]+$ ]]; do

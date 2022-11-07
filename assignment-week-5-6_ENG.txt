@@ -11,6 +11,8 @@ Week two:
 
 1. Calculate the difference in time (in seconds) when two arbitrary files were created on disk 
    using awk.
+   stat min.txt max.txt | awk 'NR == 8 {split($2, fD, "-"); split($3, fT, ":")}; NR == 16 {split($2, sD, "-"); split($3, sT, ":"); print (fD[1]-sD[1])*31557600+(fd[2]-sd[2])*2629800+(fD[3]-sD[3])*86400}+(fT[1]-sT[1])*3600+(ft[2]-sT[2])*60+fT[3]-sT[3]'
+
 
 2. Use system environment in awk, e.g. command date
 
@@ -43,4 +45,4 @@ ATOS
 Footer 
 
 Split the file items for every second line without the first and last line in new single files.
-sed '$d' samplefile2.txt | awk '{FN="file"i++".txt"}; {if (NR!=1) print >FN}'
+sed '$d' samplefile2.txt | awk '{FN="file"i++".txt"}; {if (NR!=1) print >FN}'.

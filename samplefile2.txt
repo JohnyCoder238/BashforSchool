@@ -1,8 +1,0 @@
-Header 
-HP  
-NEC  
-SGI
-CRAY
-AMD 
-ATOS
-Footer 

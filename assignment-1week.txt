@@ -1,0 +1,76 @@
+Assignment of the first week: Basic commands of UNIX systems
+
+Test:
+   1. Create file
+   	touch hello.txt
+   2. Remove file
+   	 rm hello.txt
+   3. Explain what is relative path
+   	location relative to current location
+   4. Explain what is absolute path
+   	location relative to root
+   5. And (&&) and Or (||) operators in bash
+   	&& second done only if first is done corectly
+   6. Show files in directory
+   	ls (-l)
+   7. Explain what types of privileges
+   	read, write, execute	rwx	user,group,other
+   8. Check file/directory ownership and privileges
+   	ls -l
+   9. Change file/directory privileges
+   	chmod [u/g][+-][rwx] file.txt
+   	chmod -R [u/g][+-][rwx] directory
+   10. Change file/directory ownership
+   	sudo chown user file.txt
+   11. Create directory
+   	mkdir directory
+   12. Move file into directory
+   	mv file.txt newdirectory
+   13. Move directory
+   	mv -v directory /home/user/newlocation
+   14. Copy directory
+   	cp -r directory /home/user/newlocation
+   15. Remove directory
+   	rmdir directory
+   16. Edit file
+   	nano file.txt
+   17. Save file
+   	ctrl+o ctrl+x
+   18. Find line number N in the file
+   	grep -n 'word' file.txt
+   19. Create soft link to a file
+   	ln -s file.txt linktofile.txt
+   20. Create hard link to a file
+   	ln file.txt linktofile.txt
+   21. Find where the link points to
+   	ls -l
+   22. Create a link to directory
+   	ln -s directory linkdir 
+   23. Explain the difference between 19 and 20
+   	soft link is a shortcut to acces a file
+   	hard link is a pointer to an original file and will be accesible even if the original
+   		file gets deleted or altered (works like a copy of a file
+   24. Redirect stdout
+   	command > file.txt
+   25. Redirect stdin
+   	command < file.txt
+   26. Redirect stderr
+   	command 2> file.txt
+   27. Redirect both streams
+   	command > output.txt 2> error.txt
+   28. Drop a stream (cancelling the redirecting)
+   	Ctrl+c
+   29. Find a file in directory
+   	find / [-name/-iname] filename.txt 2>/dev/null
+   30. Check if file exists
+   	test -f file.txt
+   	echo $?
+   31. Check if x is directory
+   	test -d file.txt
+   	echo $?
+   32. Check if x is a file, exists, and is not-empty
+   	test -f empty.txt && test -s empty.txt 
+	echo $?
+   33. Check the size of directory/file
+   	du -sh directory/file
+   	

@@ -1,0 +1,14 @@
+1) In some file *.txt, give only states with negative energy for k-points going from 960 to 990 from vasprun.xml
+kpoints.perl
+
+2) in the expression <i	name="e_fr_energy"> in file vasprun.xml  replace a space by a tabulator
+sed -i 's/<i name="e_fr_energy">/<i    name="e_fr_energy">/' pruntest1.xml
+
+3) in the expression <i name="e_0_energy"> in file vasprun.xml replace the one space by two spaces.
+sed -i 's/<i name="e_0_energy">/<i  name="e_0_energy">/' pruntest1.xml
+
+4) catch all the floating point and integer NUMBERS (each separetely)  in these tags (i.e., <.> NUMBER </.>) in vasprun.xml
+number.perl
+
+grep -i 'kpoint 990' vasprun.xml -B 3 | tail -3
+

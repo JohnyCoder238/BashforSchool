@@ -1,5 +1,5 @@
 For the next two weeks we aim to learn some basics of awk and sed.
-
+bc joint paste
 Week one:
 
 Learn awk and sed from the following links:
@@ -15,6 +15,8 @@ Week two:
 
 
 2. Use system environment in awk, e.g. command date
+   awk 'BEGIN{system("date")}'
+
 
 3. How do you use an already defined variable i=6 in a listing of every 7 column from 7 to 21st column... of some file
 awk '{i=6; for (j = i+1; j <= 21; j+=7) arr[j/7]=j; print $arr[1] "\t" $arr[2] "\t" $arr[3]}' filename.txt
